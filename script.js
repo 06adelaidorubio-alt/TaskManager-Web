@@ -208,7 +208,8 @@ document
             saveTasks();
         }
     );
-
+document.getElementById("progressText").textContent =
+    Math.round(progress) + "%";
 });
 
 renderTasks();
