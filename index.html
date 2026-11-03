@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskManager Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/6c7ebd0f43.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <header class="header">
+
+        <h1>
+            🚀 TaskManager Pro
+        </h1>
+
+        <p>
+            Organiza tus actividades de forma profesional
+        </p>
+
+        <div class="stats">
+
+            <div class="card">
+                <i class="fas fa-list"></i>
+                <h2 id="totalTasks">0</h2>
+                <span>Total</span>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-clock"></i>
+                <h2 id="pendingTasks">0</h2>
+                <span>Pendientes</span>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-check-circle"></i>
+                <h2 id="completedTasks">0</h2>
+                <span>Completadas</span>
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="main-container">
+
+        <section class="task-form">
+
+            <h2>Nueva Tarea</h2>
+
+            <div class="form-row">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Ingrese una tarea..."
+                    maxlength="100">
+
+                <select id="priority">
+                    <option value="high">🔴 Alta</option>
+                    <option value="medium">🟡 Media</option>
+                    <option value="low">🟢 Baja</option>
+                </select>
+
+                <input type="date" id="dateInput">
+
+                <button id="addTask">
+                    <i class="fas fa-plus"></i>
+                    Agregar
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="progress-section">
+
+            <div class="progress-header">
+
+                <h2>Progreso General</h2>
+
+                <span id="progressText">
+                    0%
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+        </section>
+
+        <section class="board">
+
+            <div class="column">
+
+                <h2>
+                    📋 Pendientes
+                </h2>
+
+                <div
+                    id="pending"
+                    class="dropzone">
+                </div>
+
+            </div>
+
+            <div class="column">
+
+                <h2>
+                    ⚙️ En Proceso
+                </h2>
+
+                <div
+                    id="progress"
+                    class="dropzone">
+                </div>
+
+            </div>
+
+            <div class="column">
+
+                <h2>
+                    ✅ Completadas
+                </h2>
+
+                <div
+                    id="done"
+                    class="dropzone">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            © 2026 TaskManager Pro
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
